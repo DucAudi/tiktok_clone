@@ -1,0 +1,17 @@
+// cấu hình để lúc import vào đơn giản hơn
+
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "~": "./src"
+        }
+      }
+    ]
+  ]
+}
+
+//  ví dụ import file App
+//  import App from '~/App' , no sẽ trỏ tới thư mục src và tìm
