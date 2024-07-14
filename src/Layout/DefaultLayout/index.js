@@ -1,19 +1,19 @@
+import classNames from "classnames/bind";
+import styles from "./DefaultLayout.module.scss";
 import Header from "~/Layout/components/Header";
 import SideBar from "./SideBar";
 
-function DefaultLayout({children}) {
-    return ( 
-        <div>
-            <Header />
-            <div className="container">
-                <SideBar/>
-                <div className="content">
-                    {/* content động, nên sẽ chuyền từ bên ngoài vào */}
-                    {children}
-                </div>
-            </div>
-        </div>
-     );
+function DefaultLayout({ children }) {
+  const cx = classNames.bind(styles);
+  return (
+    <div className={cx("wrapper")}>
+      <Header />
+      <div className={cx("container")}>
+        <SideBar />
+        <div className={cx("content")}>{children}</div>
+      </div>
+    </div>
+  );
 }
 
 export default DefaultLayout;
